@@ -1,0 +1,11 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: redis
+  namespace: {{index . "namespace"}}
+spec:
+  values:
+    image:
+      registry: docker.io
+      repository: redis
+      tag: 7.0.5

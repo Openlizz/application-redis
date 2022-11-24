@@ -1,0 +1,15 @@
+name: redis
+values:
+  passwords:
+    - name: redisPassword
+      description: "Password for the redis account."
+      print: true
+      length: 16
+      numDigits: 5
+      numSymbols: 0
+      noUpper: false
+      allowRepeat: false
+encryption:
+  enabled: true
+  inputPaths:
+    - base/secret.yaml
